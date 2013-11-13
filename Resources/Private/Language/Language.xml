@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <type>module</type>
+        <description>Language labels for the t3crr_contentelements in the backend</description>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            
+            <label index="t3crr_contentelements">T3CRR</label>  
+            <label index="t3crr_fluidtemplate">T3CRR - FluidTemplate</label>  
+            <label index="t3crr_teaser">T3CRR - Teaser</label>
+            <label index="t3crr_gallery">T3CRR - Gallery</label>
+            <label index="t3crr_imagetextleft">T3CRR - ImageTextLeft</label>  
+            <label index="t3crr_team">T3CRR - Team</label>  
+            
+            <label index="t3crr_sponsorfeature">T3CRR - Sponsor Feature</label> 
+            <label index="t3crr_sponsorfeature.title">Title</label> 
+            <label index="t3crr_sponsorfeature.link">Link</label>  
+            <label index="t3crr_sponsorfeature.fe.headline">Premium Sponsoren</label>
+            <label index="t3crr_sponsorfeature.fe.headline.title">Sponsoren</label>
+            <label index="t3crr_sponsorfeature.fe.morelink">weitere Sponsoren</label>  
+            
+            <label index="t3crr_sponsorfeature.fe.sponsors_premium">Premium Sponsoren</label>  
+            <label index="t3crr_sponsorfeature.fe.sponsors_value">Value Sponsoren</label>  
+            <label index="t3crr_sponsorfeature.fe.sponsors_media">Media Sponsoren</label>  
+
+            <label index="sponsors.premium">Premium Sponsors</label>
+            <label index="sponsors.value">Value Sponsors</label>
+            <label index="sponsors.media">Media Sponsors</label>
+            
+            <label index="tx_t3crrcontentelements_sponsorfeature_item">Sponsor Feature Item</label>
+            <label index="tx_t3crrcontentelements_sponsorfeature_item.title">Titel</label>
+            <label index="tx_t3crrcontentelements_sponsorfeature_item.image">Bild</label>
+            <label index="tx_t3crrcontentelements_sponsorfeature_item.link">Link</label>
+            <label index="tx_t3crrcontentelements_sponsorfeature_item.type">Type</label>
+
+            <label index="tx_t3crrcontentelements_teaser_item">Teaser Item</label>
+            <label index="tx_t3crrcontentelements_teaser_item.title">Title</label>
+            <label index="tx_t3crrcontentelements_teaser_item.excerpt">Excerpt</label>
+            <label index="tx_t3crrcontentelements_teaser_item.image">Bild</label>
+            <label index="tx_t3crrcontentelements_teaser_item.links">Links</label>
+            <label index="tx_t3crrcontentelements_teaser_item.links.description">Links</label>
+
+            <label index="tx_t3crrcontentelements_team_item">Team Member</label>
+            <label index="tx_t3crrcontentelements_team_item.name">Name</label>
+            <label index="tx_t3crrcontentelements_team_item.excerpt">Excerpt</label>
+            <label index="tx_t3crrcontentelements_team_item.image">Bild</label>
+            
+            <label index="tx_t3crrcontentelements_team_item.url">URL</label>
+            <label index="tx_t3crrcontentelements_team_item.twitter">Twitter Handle</label>
+            <label index="tx_t3crrcontentelements_team_item.facebook">Facebook URL</label>
+            <label index="tx_t3crrcontentelements_team_item.xing">XING URL</label>
+            <label index="tx_t3crrcontentelements_team_item.googleplus">Google+ URL</label>
+            
+
+        </languageKey>
+    </data>
+</T3locallang>

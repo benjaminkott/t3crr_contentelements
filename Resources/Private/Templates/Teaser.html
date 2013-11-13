@@ -1,0 +1,19 @@
+{namespace t3crr = T3CRR\T3crrContentelements\ViewHelpers}
+<t3crr:dataRelation uid="{data.uid}" table="tx_t3crrcontentelements_teaser_item">
+<f:if condition="{items}">
+
+    <!-- CAROUSEL START -->
+    <div id="carousel" class="slide" data-interval="10000">
+        <div class="row">
+            <div class="carousel-inner clearfix">
+                <f:for each="{items}" as="item" iteration="iteration">
+                    <f:render partial="Teaser/Item" arguments="{data:data,item:item,iteration:iteration}" />
+                </f:for>
+            </div>
+            <a class="navarea last" href="#carousel" data-slide="next"></a>
+        </div>
+    </div>
+    <!-- CAROUSEL END -->
+
+</f:if>
+</t3crr:dataRelation>

@@ -1,0 +1,19 @@
+{namespace t3crr = T3CRR\T3crrContentelements\ViewHelpers}
+<t3crr:fal data="{data}">
+<f:if condition="{items}">
+
+<div class="gallery">
+    <h2>{data.header}</h2>
+    <div class="gallery-row">
+        <f:for each="{items}" as="image" iteration="iteration">
+        <div class="gallery-item">
+            <a id="gallery{data.uid}_item{iteration.cycle}" href="{f:uri.image(src: image.uid, treatIdAsReference: 1, maxWidth: 1100, maxHeight: 1100 )}" rel="gallery{data.uid}" title="{image.title}" class="fancybox">
+                <f:image src="{image.uid}" title="{image.title}" alt="{image.alternative}" width="212c" height="159c" treatIdAsReference="1" />
+            </a>
+        </div>
+        </f:for>
+    </div>
+</div>
+        
+</f:if>
+</t3crr:fal>

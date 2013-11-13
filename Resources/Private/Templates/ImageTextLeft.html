@@ -1,0 +1,30 @@
+{namespace t3crr = T3CRR\T3crrContentelements\ViewHelpers}
+<t3crr:fal data="{data}">
+<div class="row">
+    <f:if condition="{items}">
+        <f:then>
+            <div class="four columns">
+            <f:for each="{items}" as="image" iteration="iteration">
+                <f:if condition="{image.link}">
+                    <f:then>
+                        <f:link.page pageUid="{image.link}" target="_blank">
+                            <f:image src="{image.uid}" title="{image.title}" alt="{image.alternative}" maxWidth="184" treatIdAsReference="1" />
+                        </f:link.page>        
+                    </f:then>
+                    <f:else>
+                        <f:image src="{image.uid}" title="{image.title}" alt="{image.alternative}" maxWidth="184" treatIdAsReference="1" />
+                    </f:else>
+                </f:if>
+                
+            </f:for>
+            </div>
+            <div class="eight columns">
+                <f:format.html>{data.bodytext}</f:format.html>
+            </div>
+        </f:then>
+        <f:else>
+            <f:format.html>{data.bodytext}</f:format.html>
+        </f:else>
+    </f:if>    
+</div>
+</t3crr:fal>

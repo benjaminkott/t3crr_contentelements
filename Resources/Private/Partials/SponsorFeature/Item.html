@@ -1,0 +1,12 @@
+{namespace t3crr = T3CRR\T3crrContentelements\ViewHelpers}
+<t3crr:fal data="{item}" as="images" table="tx_t3crrcontentelements_sponsorfeature_item">
+    
+    <div class="sponsor-feature-wabe {item.color} position-{iteration.cycle}">
+        <f:if condition="{images.0}">
+            <f:link.page pageUid="{item.link}" title="{item.title}">
+                <f:image src="{images.0.uid}" alt="{images.0.title}" title="{images.0.title}" width="184c" height="104c" treatIdAsReference="1"/>
+            </f:link.page>
+        </f:if>
+    </div>
+    
+</t3crr:fal>

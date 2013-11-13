@@ -1,0 +1,103 @@
+{namespace t3crr = T3CRR\T3crrContentelements\ViewHelpers}
+<t3crr:dataRelation uid="{data.uid}" table="tx_t3crrcontentelements_sponsorfeature_item" additionalWhere="AND type=1">
+<f:if condition="{items}">
+
+    <!-- SPONSOR FEATURE START -->
+    <div id="sponsor-holder">
+        <span class="overlay-holder">
+            <span class="overlay"></span>
+        </span>
+        <span class="overlay-background"></span>
+        <div class="row">
+            <div id="sponsor-row">
+                <f:if condition="{data.header_link}">
+                    <f:link.page pageUid="{data.header_link}" title="{f:translate(key:'LLL:EXT:t3crr_contentelements/Resources/Private/Language/Language.xml:t3crr_sponsorfeature.fe.headline.title')}" class="sponsor-feature-link sponsor-feature-collapse-header collapse-header open" id="sponsor-feature-link">
+                        <h4><i class="toggle-icon icon-minus"></i><f:translate key="LLL:EXT:t3crr_contentelements/Resources/Private/Language/Language.xml:t3crr_sponsorfeature.fe.headline" /></h4>
+                    </f:link.page>
+                </f:if>                
+                <div id="sponsor-feature-collapse" class="sponsor-feature-collapse collapse open"> 
+                    <f:for each="{items}" as="item" iteration="iteration">
+                        <f:render partial="SponsorFeature/Item" arguments="{data:data,item:item,iteration:iteration}" />
+                    </f:for>
+                    <f:if condition="{data.header_link}">
+                        <f:link.page pageUid="{data.header_link}" title="{f:translate(key:'LLL:EXT:t3crr_contentelements/Resources/Private/Language/Language.xml:t3crr_sponsorfeature.fe.morelink')}" class="sponsor-feature-add-link">
+                            <i class="icon-plus"></i><span><f:translate key="LLL:EXT:t3crr_contentelements/Resources/Private/Language/Language.xml:t3crr_sponsorfeature.fe.morelink" /></span>
+                        </f:link.page>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SPONSOR FEATURE END -->
+
+
+</f:if>
+</t3crr:dataRelation>
+
+
+<!-- VALUE SPONSORS AND MEDIA PARTNERS -->
+<div class="row sponsor-additional">
+    
+    <t3crr:dataRelation uid="{data.uid}" table="tx_t3crrcontentelements_sponsorfeature_item" additionalWhere="AND type=2">
+    <f:if condition="{items}">
+        <div class="sponsor-additional-column sponsor-additional-column-value">
+            <a href="#sponsor-additional-value" class="collapse-header"><h4><i class="toggle-icon icon-plus"></i><f:translate key="LLL:EXT:t3crr_contentelements/Resources/Private/Language/Language.xml:t3crr_sponsorfeature.fe.sponsors_value" /></h4></a>
+            <div id="sponsor-additional-value" class="collapse">
+            <f:for each="{items}" as="item" iteration="iteration">
+                
+                <f:if condition="{iteration.isFirst}">
+                    <div class="sponsor-additional-row sponsor-additional-row-{iteration.total}">
+                </f:if>
+
+                    <t3crr:fal data="{item}" as="images" table="tx_t3crrcontentelements_sponsorfeature_item">
+                    <f:if condition="{images.0}">
+                        <div class="sponsor-additional-item">
+                            <f:link.page pageUid="{item.link}" title="{item.title}">
+                                <f:image src="{images.0.uid}" alt="{images.0.title}" title="{images.0.title}" width="100c" height="100c" treatIdAsReference="1"/>
+                            </f:link.page>
+                        </div>
+                    </f:if>
+                    </t3crr:fal>
+                
+                <f:if condition="{iteration.isLast}">
+                    </div>
+                </f:if>
+                
+            </f:for>
+            </div>
+        </div>
+    </f:if>
+    </t3crr:dataRelation>
+    
+    <t3crr:dataRelation uid="{data.uid}" table="tx_t3crrcontentelements_sponsorfeature_item" additionalWhere="AND type=3">
+    <f:if condition="{items}">
+        <div class="sponsor-additional-column sponsor-additional-column-media">
+            <a href="#sponsor-additional-media" class="collapse-header"><h4><i class="toggle-icon icon-plus"></i><f:translate key="LLL:EXT:t3crr_contentelements/Resources/Private/Language/Language.xml:t3crr_sponsorfeature.fe.sponsors_media" /></h4></a>
+            <div id="sponsor-additional-media" class="collapse">
+            <f:for each="{items}" as="item" iteration="iteration">
+                
+                <f:if condition="{iteration.isFirst}">
+                    <div class="sponsor-additional-row sponsor-additional-row-{iteration.total}">
+                </f:if>
+                
+                    <t3crr:fal data="{item}" as="images" table="tx_t3crrcontentelements_sponsorfeature_item">
+                    <f:if condition="{images.0}">
+                        <div class="sponsor-additional-item">
+                            <f:link.page pageUid="{item.link}" title="{item.title}" target="_blank">
+                                <f:image src="{images.0.uid}" alt="{images.0.title}" title="{images.0.title}" width="100c" height="100c" treatIdAsReference="1"/>
+                            </f:link.page>
+                        </div>
+                    </f:if>
+                    </t3crr:fal>
+                
+                <f:if condition="{iteration.isLast}">
+                    </div>
+                </f:if>
+            </f:for>
+            </div>
+        </div>
+    </f:if>
+    </t3crr:dataRelation>
+    
+</div>
+<!-- VALUE SPONSORS AND MEDIA PARTNERS END -->

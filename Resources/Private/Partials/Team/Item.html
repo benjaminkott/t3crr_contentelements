@@ -1,0 +1,34 @@
+{namespace t3crr = T3CRR\T3crrContentelements\ViewHelpers}
+<t3crr:fal data="{item}" as="images" table="tx_t3crrcontentelements_team_item">
+    <div class="team-item">
+        <f:if condition="{images.0}">
+        <f:then>
+            <f:image src="{images.0.uid}" alt="{item.name}" title="{item.name}" width="240c" height="240c" treatIdAsReference="1" />        
+        </f:then>
+        <f:else>
+            <f:image src="EXT:t3crr_contentelements/Resources/Public/Images/placeholder.png" alt="" title="" width="240c" height="240c" />
+        </f:else>   
+        </f:if>
+        <div class="team-item-overlay">
+            <h2 class="team-item-name">{item.name}</h2>
+            <p>{item.excerpt}</p>
+            <div class="team-item-social">
+            <f:if condition="{item.url}">
+                <a href="{item.url}" target="_blank"><i class="icon-globe"></i></a>
+            </f:if>
+            <f:if condition="{item.twitter}">
+                <a href="https://twitter.com/{item.twitter}" target="_blank"><i class="icon-twitter"></i></a>
+            </f:if>
+            <f:if condition="{item.facebook}">
+                <a href="{item.facebook}" target="_blank"><i class="icon-facebook"></i></a>
+            </f:if>
+            <f:if condition="{item.googleplus}">
+                <a href="{item.googleplus}" target="_blank"><i class="icon-gplus"></i></a>
+            </f:if>
+            <f:if condition="{item.xing}">
+                <a href="{item.xing}" target="_blank">Xing</a>
+            </f:if>
+            </div>
+        </div>
+    </div>
+</t3crr:fal>

@@ -1,0 +1,42 @@
+{namespace t3crr = T3CRR\T3crrContentelements\ViewHelpers}
+<div class="item{f:if(condition: iteration.isFirst,then:' active')}" data-itemno="{iteration.index}">
+    <div class="image">
+        <t3crr:fal data="{item}" as="images" table="tx_t3crrcontentelements_teaser_item">
+            <f:if condition="{images}">
+                <f:image src="{images.0.uid}" alt="" width="1100" height="480" treatIdAsReference="1" />
+            </f:if>
+        </t3crr:fal>
+        <div class="overlay"></div>
+    </div>
+    <div class="content-holder">
+        <div class="content">
+            <div class="background"></div>
+            <div class="inner">
+                <h1>{item.title}</h1>
+                <f:format.html>{item.excerpt}</f:format.html>
+            </div>
+        </div>
+        <f:if condition="{item.links}">
+            <div class="actionbuttons">
+                <t3crr:explode data="{item.links}" as="links">
+                    <f:for each="{links}" as="link">
+                        <t3crr:explode data="{link}" delimiter="|" as="linkData">
+                            <f:link.page pageUid="{linkData.1}" class="{linkData.2}"><f:if condition="{linkData.3}"><i class="icon-{linkData.3}"></i> </f:if>{linkData.0}</f:link.page>
+                        </t3crr:explode>
+                    </f:for> 
+                </t3crr:explode>
+            </div>
+        </f:if>
+    </div>
+    <div class="clickarea"></div>
+    <f:if condition="{iteration.total} > 1">
+        <f:then>
+            <f:if condition="{iteration.isFirst}"><a class="navarea first" href="#carousel" data-slide="prev"></a></f:if>
+            <f:if condition="{iteration.isLast}"><a class="navarea last" href="#carousel" data-slide="next"></a></f:if>
+        </f:then>
+        <f:else>
+            <div class="navarea first"></div>
+            <div class="navarea last"></div>
+        </f:else>
+    </f:if>
+</div>

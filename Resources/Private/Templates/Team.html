@@ -1,0 +1,18 @@
+{namespace t3crr = T3CRR\T3crrContentelements\ViewHelpers}
+<t3crr:dataRelation uid="{data.uid}" table="tx_t3crrcontentelements_team_item">
+<f:if condition="{items}">
+   
+    <div class="team-holder">
+         <f:for each="{items}" as="item" iteration="iteration">
+            <f:render partial="Team/Item" arguments="{data:data,item:item,iteration:iteration}" />
+        </f:for>
+    </div>
+    
+</f:if>
+</t3crr:dataRelation>
+
+
+
+
+
+
