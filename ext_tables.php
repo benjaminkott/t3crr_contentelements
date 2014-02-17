@@ -5,10 +5,57 @@ if(!defined('TYPO3_MODE')){
 }
 
 
+/***************
+ * Add Content Elements to List
+ */
+$backupCTypeItems = $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'];
+$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'] = array(
+    array(
+        'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:t3crr_contentelements',
+        '--div--'
+    ),
+    array(
+        'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:t3crr_fluidtemplate',
+        't3crr_fluidtemplate',
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'ext_icon.gif'
+    ),
+    array(
+        'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:t3crr_imagetextleft',
+        't3crr_imagetextleft',
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'ext_icon.gif'
+    ),
+    array(
+        'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:t3crr_gallery',
+        't3crr_gallery',
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'ext_icon.gif'
+    ),
+    array(
+        'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:t3crr_team',
+        't3crr_team',
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'ext_icon.gif'
+    ),
+    array(
+        'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:t3crr_teaser',
+        't3crr_teaser',
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'ext_icon.gif'
+    ),
+    array(
+        'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:t3crr_sponsorfeature',
+        't3crr_sponsorfeature',
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'ext_icon.gif'
+    ),
+);
+foreach($backupCTypeItems as $key => $value){
+    $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'][] = $value;
+}
+unset($key);
+unset($value);
+unset($backupCTypeItems);
+
+
 /**
  * FluidTemplate
  */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(array('LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:t3crr_fluidtemplate','t3crr_fluidtemplate'),'CType');
 $TCA['tt_content']['types']['t3crr_fluidtemplate']['showitem'] = "
     --palette--;LLL:EXT:cms/locallang_ttc.xml:palette.general;general,
     header;LLL:EXT:cms/locallang_ttc.xml:header.ALT.html_formlabel,
@@ -25,7 +72,6 @@ $TCA['tt_content']['types']['t3crr_fluidtemplate']['showitem'] = "
 /**
  * ImageTextLeft
  */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(array('LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:t3crr_imagetextleft','t3crr_imagetextleft'),'CType');
 $TCA['tt_content']['types']['t3crr_imagetextleft']['showitem'] = "
     --palette--;LLL:EXT:cms/locallang_ttc.xml:palette.general;general,
     header;LLL:EXT:cms/locallang_ttc.xml:header.ALT.html_formlabel,
@@ -43,7 +89,6 @@ $TCA['tt_content']['types']['t3crr_imagetextleft']['showitem'] = "
 /**
  * Gallery
  */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(array('LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:t3crr_gallery','t3crr_gallery'),'CType');
 $TCA['tt_content']['types']['t3crr_gallery']['showitem'] = "
     --palette--;LLL:EXT:cms/locallang_ttc.xml:palette.general;general,
     header,
@@ -60,7 +105,6 @@ $TCA['tt_content']['types']['t3crr_gallery']['showitem'] = "
 /**
  * Team
  */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(array('LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:t3crr_team','t3crr_team'),'CType');
 $team_columns = array(
     'tx_t3crrcontentelements_team_item' => array(
         'label' => 'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:tx_t3crrcontentelements_team_item',
@@ -121,7 +165,6 @@ $TCA['tt_content']['types']['t3crr_team']['showitem'] = "
 /**
  * Teaser
  */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(array('LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:t3crr_teaser','t3crr_teaser'),'CType');
 $teaser_columns = array(
     'tx_t3crrcontentelements_teaser_item' => array(
         'label' => 'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:tx_t3crrcontentelements_teaser_item',
@@ -183,7 +226,6 @@ $TCA['tt_content']['types']['t3crr_teaser']['showitem'] = "
 /**
  * Sponsors
  */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(array('LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:t3crr_sponsorfeature','t3crr_sponsorfeature'),'CType');
 $sponsors_column = array(
     'tx_t3crrcontentelements_sponsorfeature_item' => array(
         'label' => 'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:sponsors.premium',

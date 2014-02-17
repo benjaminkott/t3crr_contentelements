@@ -8,11 +8,11 @@
 		<languageKey index="default" type="array">
 
 			<label index="t3crr_contentelements">T3CRR</label>  
-			<label index="t3crr_fluidtemplate">T3CRR - FluidTemplate</label>  
-			<label index="t3crr_teaser">T3CRR - Teaser</label>
-			<label index="t3crr_gallery">T3CRR - Gallery</label>
-			<label index="t3crr_imagetextleft">T3CRR - ImageTextLeft</label>  
-			<label index="t3crr_team">T3CRR - Team</label>  
+			<label index="t3crr_fluidtemplate">FluidTemplate</label>  
+			<label index="t3crr_teaser">Teaser</label>
+			<label index="t3crr_gallery">Gallery</label>
+			<label index="t3crr_imagetextleft">ImageTextLeft</label>  
+			<label index="t3crr_team">Team</label>  
 
 			<label index="t3crr_sponsorfeature">T3CRR - Sponsor Feature</label> 
 			<label index="t3crr_sponsorfeature.title">Title</label> 
