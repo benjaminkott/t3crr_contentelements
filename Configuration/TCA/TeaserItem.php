@@ -9,6 +9,7 @@ $TCA['tx_t3crrcontentelements_teaser_item'] = array(
     'interface' => array(
         'showRecordFieldList' => '
             hidden,
+            content_element,
             title,
             links,
             excerpt,
@@ -18,6 +19,7 @@ $TCA['tx_t3crrcontentelements_teaser_item'] = array(
     'types' => array(
         '1' => array('showitem' => '
             hidden;;1,
+            content_element,
             title,
             links,
             excerpt,
@@ -33,6 +35,16 @@ $TCA['tx_t3crrcontentelements_teaser_item'] = array(
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
             'config' => array(
                 'type' => 'check',
+            ),
+        ),
+        'content_element' => array(
+            'exclude' => 0,
+            'label' => 'LLL:EXT:t3crr_contentelements/Resources/Private/Language/Language.xml:tx_t3crrcontentelements_teaser_item.content_element',
+            'config' => array(
+                'type' => 'select',
+                'foreign_table' => 'tt_content',
+                'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.CType="t3crr_teaser"',
+                'maxitems' => 1,
             ),
         ),
         'title' => array(

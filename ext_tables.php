@@ -69,6 +69,7 @@ $team_columns = array(
             'foreign_table' => 'tx_t3crrcontentelements_team_item',
             'foreign_field' => 'content_element',
             'appearance' => array(
+                'useSortable' => 1,
                 'collapseAll' => 1,
                 'expandSingle' => 1,
                 'levelLinksPosition' => 'bottom'
@@ -78,17 +79,16 @@ $team_columns = array(
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content',$team_columns);
 unset($team_columns);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_t3crrcontentelements_team_item');
 $TCA['tx_t3crrcontentelements_team_item'] = array(
     'ctrl' => array(
         'title'	=> 'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:tx_t3crrcontentelements_team_item',
-        'rootLevel' => 1,
         'label' => 'name',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
         'dividers2tabs' => TRUE,
         'sortby' => 'sorting',
-        'hideTable' => TRUE,
         'versioningWS' => 2,
         'versioning_followPages' => TRUE,
         'origUid' => 't3_origuid',
@@ -130,6 +130,7 @@ $teaser_columns = array(
             'foreign_table' => 'tx_t3crrcontentelements_teaser_item',
             'foreign_field' => 'content_element',
             'appearance' => array(
+                'useSortable' => 1,
                 'collapseAll' => 1,
                 'expandSingle' => 1,
                 'levelLinksPosition' => 'bottom'
@@ -140,17 +141,16 @@ $teaser_columns = array(
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content',$teaser_columns);
 unset($teaser_columns);
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_t3crrcontentelements_teaser_item','EXT:'.$_EXTKEY.'/Resources/Private/Language/CshTeaser.xml');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_t3crrcontentelements_teaser_item');
 $TCA['tx_t3crrcontentelements_teaser_item'] = array(
     'ctrl' => array(
         'title'	=> 'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:tx_t3crrcontentelements_teaser_item',
-        'rootLevel' => 1,
         'label' => 'title',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
         'dividers2tabs' => TRUE,
         'sortby' => 'sorting',
-        'hideTable' => TRUE,
         'versioningWS' => 2,
         'versioning_followPages' => TRUE,
         'origUid' => 't3_origuid',
@@ -202,17 +202,16 @@ $sponsors_column = array(
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content',$sponsors_column);
 unset($sponsors_column);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_t3crrcontentelements_sponsorfeature_item');
 $TCA['tx_t3crrcontentelements_sponsorfeature_item'] = array(
     'ctrl' => array(
         'title'	=> 'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:tx_t3crrcontentelements_sponsorfeature_item',
-        'rootLevel' => 1,
         'label' => 'title',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
         'dividers2tabs' => TRUE,
         'sortby' => 'sorting',
-        'hideTable' => TRUE,
         'versioningWS' => 2,
         'versioning_followPages' => TRUE,
         'origUid' => 't3_origuid',

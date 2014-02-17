@@ -30,12 +30,14 @@
 			<label index="sponsors.media">Media Sponsors</label>
 
 			<label index="tx_t3crrcontentelements_sponsorfeature_item">Sponsor Feature Item</label>
+			<label index="tx_t3crrcontentelements_sponsorfeature_item.content_element">Content Element</label>
 			<label index="tx_t3crrcontentelements_sponsorfeature_item.title">Titel</label>
 			<label index="tx_t3crrcontentelements_sponsorfeature_item.image">Bild</label>
 			<label index="tx_t3crrcontentelements_sponsorfeature_item.link">Link</label>
 			<label index="tx_t3crrcontentelements_sponsorfeature_item.type">Type</label>
 
 			<label index="tx_t3crrcontentelements_teaser_item">Teaser Item</label>
+			<label index="tx_t3crrcontentelements_teaser_item.content_element">Content Element</label>
 			<label index="tx_t3crrcontentelements_teaser_item.title">Title</label>
 			<label index="tx_t3crrcontentelements_teaser_item.excerpt">Excerpt</label>
 			<label index="tx_t3crrcontentelements_teaser_item.image">Bild</label>
@@ -43,10 +45,10 @@
 			<label index="tx_t3crrcontentelements_teaser_item.links.description">Links</label>
 
 			<label index="tx_t3crrcontentelements_team_item">Team Member</label>
+			<label index="tx_t3crrcontentelements_team_item.content_element">Content Element</label>
 			<label index="tx_t3crrcontentelements_team_item.name">Name</label>
 			<label index="tx_t3crrcontentelements_team_item.excerpt">Excerpt</label>
 			<label index="tx_t3crrcontentelements_team_item.image">Bild</label>
-
 			<label index="tx_t3crrcontentelements_team_item.url">URL</label>
 			<label index="tx_t3crrcontentelements_team_item.twitter">Twitter Handle</label>
 			<label index="tx_t3crrcontentelements_team_item.facebook">Facebook URL</label>
