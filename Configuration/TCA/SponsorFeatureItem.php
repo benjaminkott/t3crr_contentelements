@@ -63,7 +63,7 @@ $TCA['tx_t3crrcontentelements_sponsorfeature_item'] = array(
                 'size' => 1,
                 'type' => 'select',
                 'exclude' => 1
-                
+
             ),
             'label' => 'LLL:EXT:t3crr_contentelements/Resources/Private/Language/Language.xml:tx_t3crrcontentelements_sponsorfeature_item.type',
         ),
@@ -135,5 +135,3 @@ $TCA['tx_t3crrcontentelements_sponsorfeature_item'] = array(
         ),
     ),
 );
-
-?>

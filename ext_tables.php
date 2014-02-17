@@ -248,6 +248,3 @@ $TCA['tt_content']['types']['t3crr_sponsorfeature']['showitem'] = "
     --palette--;LLL:EXT:cms/locallang_ttc.xml:palette.access;access,
     --div--;LLL:EXT:cms/locallang_ttc.xml:tabs.extended
 ";
-
-
-?>

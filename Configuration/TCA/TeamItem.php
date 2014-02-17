@@ -121,5 +121,3 @@ $TCA['tx_t3crrcontentelements_team_item'] = array(
         ),
     ),
 );
-
-?>

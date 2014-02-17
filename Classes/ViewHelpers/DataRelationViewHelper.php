@@ -42,7 +42,7 @@ class DataRelationViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractVi
      * @return string
      */
     public function render($uid,$table,$foreignField = "content_element",$selectFields = "*", $as = "items", $sortby = "sorting ASC", $additionalWhere = "") {
-        
+
         if($uid && $table && $foreignField){
             $selectFields = $selectFields;
             $fromTable    = $table;
@@ -55,14 +55,13 @@ class DataRelationViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractVi
         }else{
             $items = NULL;
         }
-        
+
         $this->templateVariableContainer->add($as, $items);
         $content = $this->renderChildren();
         $this->templateVariableContainer->remove($as); 
-        
+
         return $content;
 
     }
-    
+
 }
-?>

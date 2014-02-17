@@ -78,5 +78,3 @@ $TCA['tx_t3crrcontentelements_teaser_item'] = array(
         ),
     ),
 );
-
-?>

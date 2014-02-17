@@ -53,10 +53,9 @@ class FalViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper 
         $this->templateVariableContainer->add($as, $items);
         $content = $this->renderChildren();
         $this->templateVariableContainer->remove($as);
-        
+
         return $content;
 
     }
 
 }
-?>
