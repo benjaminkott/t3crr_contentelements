@@ -28,7 +28,8 @@ namespace T3CRR\T3crrContentelements\ViewHelpers;
 /**
  * @author Benjamin Kott <info@bk2k.info>
  */
-class DataRelationViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
+class DataRelationViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
+{
 
     /**
      * @param integer $uid
@@ -38,12 +39,13 @@ class DataRelationViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractVi
      * @param string $as
      * @param string $sortby
      * @param string $additionalWhere
-     * 
+     *
      * @return string
      */
-    public function render($uid,$table,$foreignField = "content_element",$selectFields = "*", $as = "items", $sortby = "sorting ASC", $additionalWhere = "") {
+    public function render($uid, $table, $foreignField = "content_element", $selectFields = "*", $as = "items", $sortby = "sorting ASC", $additionalWhere = "")
+    {
 
-        if($uid && $table && $foreignField){
+        if ($uid && $table && $foreignField) {
             $selectFields = $selectFields;
             $fromTable    = $table;
             $whereClause  = '1 AND `'.$foreignField.'` = \''.$uid.'\' AND deleted = 0 AND hidden = 0 '.$additionalWhere;
@@ -52,16 +54,15 @@ class DataRelationViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractVi
             $limit        = '';
             $GLOBALS['TYPO3_DB']->store_lastBuiltQuery = 1;
             $items = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows($selectFields, $fromTable, $whereClause, $groupBy, $orderBy, $limit);
-        }else{
-            $items = NULL;
+        } else {
+            $items = null;
         }
 
         $this->templateVariableContainer->add($as, $items);
         $content = $this->renderChildren();
-        $this->templateVariableContainer->remove($as); 
+        $this->templateVariableContainer->remove($as);
 
         return $content;
 
     }
-
 }

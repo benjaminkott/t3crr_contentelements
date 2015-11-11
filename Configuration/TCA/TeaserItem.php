@@ -1,6 +1,6 @@
 <?php
 
-if(!defined('TYPO3_MODE')){
+if (!defined('TYPO3_MODE')) {
     die('Access denied.');
 }
 
@@ -79,14 +79,17 @@ $TCA['tx_t3crrcontentelements_teaser_item'] = array(
         'image' => array(
             'exclude' => 0,
             'label' => 'LLL:EXT:t3crr_contentelements/Resources/Private/Language/Language.xml:tx_t3crrcontentelements_teaser_item.image',
-            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig('image', array(
+            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+                'image',
+                array(
                 'appearance' => array(
                     'createNewRelationLinkTitle' => 'LLL:EXT:cms/locallang_ttc.xlf:images.addFileReference',
                 ),
                 'minitems' => 0,
                 'maxitems' => 1,
-            ), 
-            $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']),
+                ),
+                $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+            ),
         ),
     ),
 );

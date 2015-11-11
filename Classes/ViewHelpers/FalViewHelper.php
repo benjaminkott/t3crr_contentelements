@@ -28,7 +28,8 @@ namespace T3CRR\T3crrContentelements\ViewHelpers;
 /**
  * @author Benjamin Kott <info@bk2k.info>
  */
-class FalViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
+class FalViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
+{
 
     /**
      * @var \TYPO3\CMS\Core\Resource\FileRepository
@@ -43,12 +44,13 @@ class FalViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper 
      *
      * @return string
      */
-    public function render($data,$as = "items", $table = "tt_content", $field = "image") {
-        if(is_array($data) && $data['uid'] && $data[$field]){
+    public function render($data, $as = "items", $table = "tt_content", $field = "image")
+    {
+        if (is_array($data) && $data['uid'] && $data[$field]) {
             $this->fileRepository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Resource\\FileRepository');
             $items = $this->fileRepository->findByRelation($table, $field, $data['uid']);
-        }else{
-            $items = NULL;
+        } else {
+            $items = null;
         }
         $this->templateVariableContainer->add($as, $items);
         $content = $this->renderChildren();
@@ -57,5 +59,4 @@ class FalViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper 
         return $content;
 
     }
-
 }

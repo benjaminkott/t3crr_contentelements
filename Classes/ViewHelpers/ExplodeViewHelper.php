@@ -28,7 +28,8 @@ namespace T3CRR\T3crrContentelements\ViewHelpers;
 /**
  * @author Benjamin Kott <info@bk2k.info>
  */
-class ExplodeViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
+class ExplodeViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
+{
 
     /**
      * @param string $data
@@ -36,12 +37,13 @@ class ExplodeViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHel
      * @param string $delimiter
      * @return string
      */
-    public function render($data,$as = "items", $delimiter = LF) {
-        if($data){            
+    public function render($data, $as = "items", $delimiter = LF)
+    {
+        if ($data) {
             $items = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode($delimiter, $data);
-            $this->templateVariableContainer->add($as, $items);        
-            $content = $this->renderChildren();            
-            $this->templateVariableContainer->remove($as); 
+            $this->templateVariableContainer->add($as, $items);
+            $content = $this->renderChildren();
+            $this->templateVariableContainer->remove($as);
         }
         return $content;
     }

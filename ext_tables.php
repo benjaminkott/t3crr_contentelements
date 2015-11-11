@@ -1,6 +1,6 @@
 <?php
 
-if(!defined('TYPO3_MODE')){
+if (!defined('TYPO3_MODE')) {
     die('Access denied.');
 }
 
@@ -45,7 +45,7 @@ $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'] = array(
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'ext_icon.gif'
     ),
 );
-foreach($backupCTypeItems as $key => $value){
+foreach ($backupCTypeItems as $key => $value) {
     $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'][] = $value;
 }
 unset($key);
@@ -121,20 +121,20 @@ $team_columns = array(
         ),
     ),
 );
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content',$team_columns);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $team_columns);
 unset($team_columns);
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_t3crrcontentelements_team_item');
 $TCA['tx_t3crrcontentelements_team_item'] = array(
     'ctrl' => array(
-        'title'	=> 'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:tx_t3crrcontentelements_team_item',
+        'title'     => 'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:tx_t3crrcontentelements_team_item',
         'label' => 'name',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
-        'dividers2tabs' => TRUE,
+        'dividers2tabs' => true,
         'sortby' => 'sorting',
         'versioningWS' => 2,
-        'versioning_followPages' => TRUE,
+        'versioning_followPages' => true,
         'origUid' => 't3_origuid',
         'languageField' => 'sys_language_uid',
         'transOrigPointerField' => 'l10n_parent',
@@ -181,21 +181,21 @@ $teaser_columns = array(
         ),
     ),
 );
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content',$teaser_columns);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $teaser_columns);
 unset($teaser_columns);
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_t3crrcontentelements_teaser_item','EXT:'.$_EXTKEY.'/Resources/Private/Language/CshTeaser.xml');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_t3crrcontentelements_teaser_item', 'EXT:'.$_EXTKEY.'/Resources/Private/Language/CshTeaser.xml');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_t3crrcontentelements_teaser_item');
 $TCA['tx_t3crrcontentelements_teaser_item'] = array(
     'ctrl' => array(
-        'title'	=> 'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:tx_t3crrcontentelements_teaser_item',
+        'title'     => 'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:tx_t3crrcontentelements_teaser_item',
         'label' => 'title',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
-        'dividers2tabs' => TRUE,
+        'dividers2tabs' => true,
         'sortby' => 'sorting',
         'versioningWS' => 2,
-        'versioning_followPages' => TRUE,
+        'versioning_followPages' => true,
         'origUid' => 't3_origuid',
         'languageField' => 'sys_language_uid',
         'transOrigPointerField' => 'l10n_parent',
@@ -242,20 +242,20 @@ $sponsors_column = array(
         ),
     ),
 );
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content',$sponsors_column);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $sponsors_column);
 unset($sponsors_column);
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_t3crrcontentelements_sponsorfeature_item');
 $TCA['tx_t3crrcontentelements_sponsorfeature_item'] = array(
     'ctrl' => array(
-        'title'	=> 'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:tx_t3crrcontentelements_sponsorfeature_item',
+        'title'     => 'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/Language.xml:tx_t3crrcontentelements_sponsorfeature_item',
         'label' => 'title',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
-        'dividers2tabs' => TRUE,
+        'dividers2tabs' => true,
         'sortby' => 'sorting',
         'versioningWS' => 2,
-        'versioning_followPages' => TRUE,
+        'versioning_followPages' => true,
         'origUid' => 't3_origuid',
         'languageField' => 'sys_language_uid',
         'transOrigPointerField' => 'l10n_parent',
