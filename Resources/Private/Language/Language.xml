@@ -7,26 +7,26 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 
-			<label index="t3crr_contentelements">T3CRR</label>  
-			<label index="t3crr_fluidtemplate">FluidTemplate</label>  
+			<label index="t3crr_contentelements">T3CRR</label>
+			<label index="t3crr_fluidtemplate">FluidTemplate</label>
 			<label index="t3crr_teaser">Teaser</label>
 			<label index="t3crr_gallery">Gallery</label>
-			<label index="t3crr_imagetextleft">ImageTextLeft</label>  
-			<label index="t3crr_team">Team</label>  
+			<label index="t3crr_imagetextleft">ImageTextLeft</label>
+			<label index="t3crr_team">Team</label>
 
-			<label index="t3crr_sponsorfeature">T3CRR - Sponsor Feature</label> 
-			<label index="t3crr_sponsorfeature.title">Title</label> 
-			<label index="t3crr_sponsorfeature.link">Link</label>  
-			<label index="t3crr_sponsorfeature.fe.headline">Premium Sponsoren</label>
+			<label index="t3crr_sponsorfeature">T3CRR - Sponsor Feature</label>
+			<label index="t3crr_sponsorfeature.title">Title</label>
+			<label index="t3crr_sponsorfeature.link">Link</label>
+			<label index="t3crr_sponsorfeature.fe.headline">Platinum Sponsoren</label>
 			<label index="t3crr_sponsorfeature.fe.headline.title">Sponsoren</label>
-			<label index="t3crr_sponsorfeature.fe.morelink">weitere Sponsoren</label>  
+			<label index="t3crr_sponsorfeature.fe.morelink">weitere Sponsoren</label>
 
-			<label index="t3crr_sponsorfeature.fe.sponsors_premium">Premium Sponsoren</label>  
-			<label index="t3crr_sponsorfeature.fe.sponsors_value">Value Sponsoren</label>  
-			<label index="t3crr_sponsorfeature.fe.sponsors_media">Media Sponsoren</label>  
+			<label index="t3crr_sponsorfeature.fe.sponsors_premium">Platinum Sponsoren</label>
+			<label index="t3crr_sponsorfeature.fe.sponsors_value">Gold Sponsoren</label>
+			<label index="t3crr_sponsorfeature.fe.sponsors_media">Media Sponsoren</label>
 
-			<label index="sponsors.premium">Premium Sponsors</label>
-			<label index="sponsors.value">Value Sponsors</label>
+			<label index="sponsors.premium">Platinum Sponsors</label>
+			<label index="sponsors.value">Gold Sponsors</label>
 			<label index="sponsors.media">Media Sponsors</label>
 
 			<label index="tx_t3crrcontentelements_sponsorfeature_item">Sponsor Feature Item</label>
