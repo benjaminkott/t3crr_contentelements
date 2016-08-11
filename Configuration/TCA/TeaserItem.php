@@ -42,6 +42,7 @@ $TCA['tx_t3crrcontentelements_teaser_item'] = array(
             'label' => 'LLL:EXT:t3crr_contentelements/Resources/Private/Language/Language.xml:tx_t3crrcontentelements_teaser_item.content_element',
             'config' => array(
                 'type' => 'select',
+                'renderType' => 'selectSingle',
                 'foreign_table' => 'tt_content',
                 'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.CType="t3crr_teaser"',
                 'maxitems' => 1,
@@ -82,11 +83,11 @@ $TCA['tx_t3crrcontentelements_teaser_item'] = array(
             'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                 'image',
                 array(
-                'appearance' => array(
-                    'createNewRelationLinkTitle' => 'LLL:EXT:cms/locallang_ttc.xlf:images.addFileReference',
-                ),
-                'minitems' => 0,
-                'maxitems' => 1,
+                    'appearance' => array(
+                        'createNewRelationLinkTitle' => 'LLL:EXT:cms/locallang_ttc.xlf:images.addFileReference',
+                    ),
+                    'minitems' => 0,
+                    'maxitems' => 1,
                 ),
                 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
             ),

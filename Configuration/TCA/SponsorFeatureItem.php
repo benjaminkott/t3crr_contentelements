@@ -60,6 +60,7 @@ $TCA['tx_t3crrcontentelements_sponsorfeature_item'] = array(
             'label' => 'LLL:EXT:t3crr_contentelements/Resources/Private/Language/Language.xml:tx_t3crrcontentelements_sponsorfeature_item.content_element',
             'config' => array(
                 'type' => 'select',
+                'renderType' => 'selectSingle',
                 'foreign_table' => 'tt_content',
                 'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.CType="t3crr_sponsorfeature"',
                 'maxitems' => 1,
@@ -67,6 +68,8 @@ $TCA['tx_t3crrcontentelements_sponsorfeature_item'] = array(
         ),
         'type' => array(
             'config' => array(
+                'type' => 'select',
+                'renderType' => 'selectSingle',
                 'default' => 1,
                 'items' => array(
                     array('LLL:EXT:t3crr_contentelements/Resources/Private/Language/Language.xml:sponsors.premium',1),
@@ -75,7 +78,6 @@ $TCA['tx_t3crrcontentelements_sponsorfeature_item'] = array(
                 ),
                 'maxitems' => 1,
                 'size' => 1,
-                'type' => 'select',
                 'exclude' => 1
 
             ),
@@ -86,6 +88,7 @@ $TCA['tx_t3crrcontentelements_sponsorfeature_item'] = array(
             'exclude' => 1,
             'config' => array(
                 'type' => 'select',
+                'renderType' => 'selectSingle',
                 'items' => array(
                     array(
                         'white',

@@ -50,6 +50,7 @@ $TCA['tx_t3crrcontentelements_team_item'] = array(
             'label' => 'LLL:EXT:t3crr_contentelements/Resources/Private/Language/Language.xml:tx_t3crrcontentelements_team_item.content_element',
             'config' => array(
                 'type' => 'select',
+                'renderType' => 'selectSingle',
                 'foreign_table' => 'tt_content',
                 'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.CType="t3crr_team"',
                 'maxitems' => 1,
