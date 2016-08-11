@@ -106,6 +106,10 @@ $TCA['tx_t3crrcontentelements_sponsorfeature_item'] = array(
                         'blue',
                         'blue'
                     ),
+                    array(
+                        'green',
+                        'green'
+                    ),
                 ),
                 'default' => 'white'
             )
