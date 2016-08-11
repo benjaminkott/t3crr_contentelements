@@ -9,7 +9,7 @@ $EM_CONF[$_EXTKEY] = array (
     'description' => '',
     'category' => 'misc',
     'shy' => 1,
-    'version' => '0.0.2',
+    'version' => '0.0.3',
     'dependencies' => '',
     'conflicts' => '',
     'priority' => '',
@@ -28,9 +28,7 @@ $EM_CONF[$_EXTKEY] = array (
     'CGLcompliance_note' => null,
     'constraints' => array (
         'depends' => array (
-            'typo3' => '6.0.0-0.0.0',
-            'extbase' => '',
-            'fluid' => '',
+            'typo3' => '7.6.0-7.6.99',
         ),
         'conflicts' => '',
     ),
